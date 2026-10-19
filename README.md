@@ -1,7 +1,7 @@
-<h1 align="center">给前端 App 做一个流畅的表情包面板</h1>
+<h1 align="center">给 iOS App 做一个流畅的表情包面板</h1>
 
 <p align="center">
-  <strong>内含：如何教 AI 看懂、选择并收发表情包</strong>
+  <strong>附：如何教 AI 看懂、挑选并收发表情包</strong>
 </p>
 
 <p align="center">
