@@ -14,7 +14,7 @@
   <img src="assets/sticker-panel-hero.png" alt="AI 聊天 App 表情包面板插画" width="100%">
 </p>
 
-> 因为鉴于有的朋友的前端App是原生的，有的朋友家的是网页套 Capacitor 壳子，还有很多人的 AI 住在 Telegram 机器人里。
+> 因为有的朋友的前端App是原生的，有的朋友家的是网页套 Capacitor 壳子，还有很多人的 AI 住在 Telegram 机器人里。
 > 这份把三种都写了：**先看第一部分（通用），再跳到你家那种。**
 
 ## 先认一下你家是哪种
