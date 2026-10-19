@@ -1,9 +1,23 @@
-# 给 AI 聊天 App 做表情包：三种 App 各怎么做
+<h1 align="center">给 AI 聊天 App 做表情包</h1>
+
+<p align="center">
+  <strong>从命名、存储、动图，到面板交互与 AI 收发，一篇讲清三种实现路径。</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/iOS-SwiftUI-EA7B55?style=flat-square" alt="iOS · SwiftUI">
+  <img src="https://img.shields.io/badge/Web-Capacitor-5F8DA8?style=flat-square" alt="Web · Capacitor">
+  <img src="https://img.shields.io/badge/Bot-Telegram-5E7280?style=flat-square" alt="Bot · Telegram">
+</p>
+
+<p align="center">
+  <img src="assets/sticker-panel-hero.png" alt="AI 聊天 App 表情包面板插画" width="100%">
+</p>
 
 > 因为鉴于有的朋友的前端App是原生的，有的朋友家的是网页套 Capacitor 壳子，还有很多人的 AI 住在 Telegram 机器人里。
 > 这份把三种都写了：**先看第一部分（通用），再跳到你家那种。**
 
-**先认一下你家是哪种：**
+## 先认一下你家是哪种
 
 | 你家 App | 怎么认 | 看哪节 |
 |---|---|---|
@@ -15,6 +29,16 @@
 **没有 Mac 也没关系**：第二部分要 Mac，第三、四部分全程不用。
 
 ---
+
+## 快速导航
+
+| 通用基础 | 原生 iOS | 网页 / Capacitor | Telegram Bot |
+|---|---|---|---|
+| [命名、JSON、动图与交互](#common) | [SwiftUI 原地换键盘](#ios) | [网页面板与键盘切换](#web) | [贴纸映射与发送](#telegram) |
+
+---
+
+<a id="common"></a>
 
 ## 第一部分：通用（三种都要做）
 
@@ -79,6 +103,8 @@
 **聊天里的贴纸气泡**：裸图、固定 150×150、贴着角落，不加气泡底色。固定尺寸是为了行高不跳：等图片加载完才知道尺寸的话，聊天列表会跳。
 
 ---
+
+<a id="ios"></a>
 
 ## 第二部分：原生 iOS（SwiftUI）
 
@@ -200,6 +226,8 @@ struct AnimatedStickerView: UIViewRepresentable {
 
 ---
 
+<a id="web"></a>
+
 ## 第三部分：网页壳子（Capacitor）/ 纯网页
 
 **全程只改网页代码，不用 Mac，不用重新打包。**
@@ -282,6 +310,8 @@ emojiButton.addEventListener('touchstart', e => e.preventDefault(), { passive: f
 选完弹个小框起名、挑包，再上传到服务器、写进 JSON。上传 GIF 时别用 canvas 压缩（canvas 一画就只剩第一帧），直接传原文件，大的交给服务器端转。
 
 ---
+
+<a id="telegram"></a>
 
 ## 第四部分：Telegram 机器人
 
